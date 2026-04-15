@@ -273,12 +273,12 @@ Kaikki projektissa esiintyvät käyttäjät ovat kuvitteellisia ja heidän datan
 <table>
   <tr>
     <td align="center">
-      <img src="images/matti_analyysi.png" width="400" />
-      <br><strong>Kuva 1:</strong> Matin analyysi
+        <img src="images/matti_analyysi.png" style="height: 300px; width: auto;" />
+        <br><strong>Kuva 1:</strong> Matin analyysi
     </td>
     <td align="center">
-      <img src="images/mikko_analyysi.png" width="400" />
-      <br><strong>Kuva 2:</strong> Mikon analyysi
+        <img src="images/mikko_analyysi.png" style="height: 300px; width: auto;" />
+        <br><strong>Kuva 2:</strong> Mikon analyysi
     </td>
   </tr>
 </table>
