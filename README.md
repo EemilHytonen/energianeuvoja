@@ -190,7 +190,7 @@ Ratkaisu: Ongelma tunnistettu, mutta konfliktiryhmien hallintaa (esim. vinkit 3 
 
 extract_used_sources tunnistaa käytetyt vinkit lähteen perusteella. Jos vastauksessa mainitaan "Motiva", kaikki Motivan vinkit merkitään valituiksi. Ongelma korostui, koska tekoälyn tuottamissa vastauksissa lähdeviitteet olivat HTML-linkkejä.
 
-Ratkaisu: Parannettiin funktiota poistamaan HTML-tagit ennen vertailua (clean_text = re.sub(r'<[^>]+>', '', text)), jotta lähdenimi löytyy oikein. Tarkempi vinkkikohtainen tunnistus (otsikon tai sisällön perusteella) jätettiin kuitenkin toteuttamatta aikataulusyistä. Tämä on hyväksytty rajoite, koska se ei vaikuta loppukäyttäjän kokemukseen.
+Ratkaisu: Parannettiin funktiota poistamaan HTML-tagit ennen vertailua (clean_text = re.sub(r'<[^>]+>', '', text)), jotta lähdenimi löytyy oikein. Tarkempi vinkkikohtainen tunnistus (otsikon tai sisällön perusteella) jätettiin kuitenkin toteuttamatta aikataulusyistä. Lokeissa näkyy tekoälyn valitsevan aina kaikki kuusi saatavilla olevista vinkeistä, mutta vain neljä päätyy analyysiin. Tämä on hyväksytty rajoite, koska se ei vaikuta loppukäyttäjän kokemukseen.
 
 **4. Vertailu Tilastokeskuksen dataan**
 
