@@ -74,7 +74,7 @@ Lähdeluettelo – pääsivujen linkit analyysissä käytetyille lähteille.
 
 **7. Lokitus**
 
-logger.py tallentaa jokaisen analyysin tapahtumat (event-id, valitut vinkit, virheet) tiedostoon logs/-kansioon ja tulostaa ne myös IDE:n (VSC) terminaaliin.
+logger.py tallentaa jokaisen analyysin tapahtumat (event-id, valitut vinkit, virheet) tiedostoon logs/-kansioon ja tulostaa ne myös IDE:n (VS Code) terminaaliin.
 
 ## 4. Arkkitehtuuri (modulaarinen)
 
