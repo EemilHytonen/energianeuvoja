@@ -24,41 +24,41 @@ Palvelu analysoi asiakkaan sähkönkulutusta (7 päivän tuntidata), vertaa sit�
 
 ## 3. Miten sovellus toimii
 
-Sovellus on rakennettu modulaariseksi ja se toimii seuraavasti:
+    Sovellus on rakennettu modulaariseksi ja se toimii seuraavasti:
 
 1. **Käyttäjä valitsee asiakkaan** (Matti, Laura, Mikko, Jukka, Sari)
 
-Valinta tapahtuu Streamlitin selectbox-komponentilla.
+    Valinta tapahtuu Streamlitin selectbox-komponentilla.
 
 2. **Sovellus lataa tiedot**
 
-data_loader.py hakee valitun asiakkaan kulutusdatan (data/consumption_<nimi>.json) ja profiilitiedot (data/profiles.json).
+    data_loader.py hakee valitun asiakkaan kulutusdatan (data/consumption_<nimi>.json) ja profiilitiedot (data/profiles.json).
 
-Kulutusdata sisältää 7 päivän satunnaiset tuntikohtaiset sähkönkulutukset (mock-data). Satunnaisuutta on rajattu realismiin pyrkien (generate_weekly_data.py).
+    Kulutusdata sisältää 7 päivän satunnaiset tuntikohtaiset sähkönkulutukset (mock-data). Satunnaisuutta on rajattu realismiin pyrkien (generate_weekly_data.py).
 
-Profiili sisältää asumismuodon, lämmitystavan, ilmalämpöpumpun, sähköauton, mökin, saunan ja pörssisähkön käytön.
+    Profiili sisältää asumismuodon, lämmitystavan, ilmalämpöpumpun, sähköauton, mökin, saunan ja pörssisähkön käytön.
 
 3. **Tekoäly (DeepSeek) analysoi kulutuksen**
 
-analyzer.py laskee asiakkaan viikkokulutuksen ja vertaa sitä pyöristettyyn Tilastokeskuksen keskiarvoon asumismuodon perusteella.
+    analyzer.py laskee asiakkaan viikkokulutuksen ja vertaa sitä pyöristettyyn Tilastokeskuksen keskiarvoon asumismuodon perusteella.
 
-Tiedot lähetetään DeepSeekille promptin avulla, joka pyytää tunnistamaan kolme suurinta kulutuspiikkiä, tarkastelemaan yökulutusta (23-05) ja kommentoimaan vertailua Tilastokeskuksen keskiarvoon.
+    Tiedot lähetetään DeepSeekille promptin avulla, joka pyytää tunnistamaan kolme suurinta kulutuspiikkiä, tarkastelemaan yökulutusta (23-05) ja kommentoimaan vertailua Tilastokeskuksen keskiarvoon.
 
-Tekoäly palauttaa analyysin tekstinä.
+    Tekoäly palauttaa analyysin tekstinä.
 
 4. **Vinkkien suodatus ja valinta**
 
-tip_retriever.py suodattaa tips.json:n vinkit asiakkaan profiilin perusteella (esim. jos asiakkaalla ei ole sähköautoa, sähköautovinkit jätetään pois). Vinkkikategorioita on yhteensä 14 ja yhteensä vinkkejä 34.
+    tip_retriever.py suodattaa tips.json:n vinkit asiakkaan profiilin perusteella (esim. jos asiakkaalla ei ole sähköautoa, sähköautovinkit jätetään pois). Vinkkikategorioita on yhteensä 14 ja yhteensä vinkkejä 34.
 
-Suodatuksen jälkeen vinkit ryhmitellään kategorioittain ja valitaan korkeintaan 6 eri kategoriaa (kerrostettu otanta). Kustakin kategoriasta poimitaan yksi satunnainen vinkki. Tällä varmistetaan, että asiakas saa monipuolisia neuvoja heille sopivilta aihealueilta.
+    Suodatuksen jälkeen vinkit ryhmitellään kategorioittain ja valitaan korkeintaan 6 eri kategoriaa (kerrostettu otanta). Kustakin kategoriasta poimitaan yksi satunnainen vinkki. Tällä varmistetaan, että asiakas saa monipuolisia neuvoja heille sopivilta aihealueilta.
 
 5. **Lopullisen vastauksen muodostus**
 
-app.py rakentaa uuden promptin, jossa tekoäly saa profiilin, analyysin ja valitut vinkit.
+    app.py rakentaa uuden promptin, jossa tekoäly saa profiilin, analyysin ja valitut vinkit.
 
-Tekoälyä pyydetään valitsemaan korkeintaan neljä vinkkiä kerrostetusta otannasta ja kirjoittamaan henkilökohtainen, ystävällinen vastaus (max 8 virkettä).
+    Tekoälyä pyydetään valitsemaan korkeintaan neljä vinkkiä kerrostetusta otannasta ja kirjoittamaan henkilökohtainen, ystävällinen vastaus (max 8 virkettä).
 
-Vastaus muotoillaan niin, että jokaisen vinkin perässä on (Lähde: Nimi, URL), ja nämä muunnetaan HTML-linkeiksi, jotta lähteet ovat varmistettavissa.
+    Vastaus muotoillaan niin, että jokaisen vinkin perässä on (Lähde: Nimi, URL), ja nämä muunnetaan HTML-linkeiksi, jotta lähteet ovat varmistettavissa.
 
 6. **Tulosten esittäminen**
 
@@ -229,45 +229,40 @@ Ratkaisu: Tuotannossa voitaisiin käyttää välimuistia, asynkronista käsittel
 
 8. **Vaikutuspohjainen vinkkien painotus** – vinkeille annetaan painokerroin niiden todellisen säästöpotentiaalin mukaan (esim. sähköauton latauksen ajoitus > LED-lamput). Tekoäly priorisoi suuremman vaikutuksen vinkkejä. Toteutus esimerkiksi lisäämällä `impact_score`-kenttä `tips.json`:iin (arvot 1-10) ja ohjaamalla tekoälyä painottamaan korkeamman pistemäärän vinkkejä.
 
-## 9. .gitignore
+## 9. GitIgnore
 
-.gitignore
-# Virtual environment
+Virtual environment
 venv/
 env/
 ENV/
 
-# Python cache
+Python cache
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# API keys and secrets
+API keys and secrets
 .env
 .env.local
 .env.*.local
 
-# Logs
+Logs
 logs/
 *.log
 
-# Streamlit
+Streamlit
 .streamlit/
 
-# IDE
+IDE
 .vscode/
 .idea/
 
-# OS generated files
+OS generated files
 .DS_Store
 Thumbs.db
 
-## 10. Kuvakaappaus
-
-(Lisää tähän kuva toimivasta sovelluksesta, esim. Matin analyysistä)
-
-Esimerkki Matin analyysistä – vertailu, kuvaaja ja personoidut vinkit.
+## 10. Kuvakaappauksia
 
 ## 11. Tekijä ja kiitokset
 
