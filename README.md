@@ -114,7 +114,9 @@ energianeuvonta/
 ## 5. Asennus ja käyttö
 
 **1. Kloonaa tai lataa projekti**
+
 **2. Avaa terminaali projektin juuressa**
+
 **3. Luo virtuaaliympäristö ja aktivoi se**  
 
 ```bash
@@ -233,38 +235,41 @@ Ratkaisu: Tuotannossa voitaisiin käyttää välimuistia, asynkronista käsittel
 
 ## 9. GitIgnore
 
-Virtual environment
+**Virtual environment**
 venv/
 env/
 ENV/
 
-Python cache
+**Python cache**
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-API keys and secrets
+**API keys and secrets**
 .env
 .env.local
 .env.*.local
 
-Logs
+**Logs**
 logs/
 *.log
 
-Streamlit
+**Streamlit**
 .streamlit/
 
-IDE
+**IDE**
 .vscode/
 .idea/
 
-OS generated files
+**OS generated files**
 .DS_Store
 Thumbs.db
 
 ## 10. Kuvakaappauksia
+
+![Sovelluksen esittely](images/matti_analyysi.png)
+![Sovelluksen esittely](images/mikko.png)
 
 ## 11. Tekijä ja kiitokset
 
