@@ -88,8 +88,10 @@ energianeuvonta/
 ├── .gitignore
 ├── README.md
 │
+├── images/ # Kuvakaappauksia analyyseistä
+│
 ├── modules/
-│ ├── init.py
+│ ├── __init.py__
 │ ├── data_loader.py # Lataa kulutusdatan ja profiilit
 │ ├── llm_interface.py # Abstrakti LLM + DeepSeek-toteutus (vaihdettavissa)
 │ ├── analyzer.py # Kulutusanalyysi + vertailu Tilastokeskukseen
@@ -106,7 +108,7 @@ energianeuvonta/
 │ └── tips.json # 34 vinkkiä 4 lähteestä (Motiva, Vaasan Sähkö, Energiavirasto, Tilastokeskus)
 │
 └── logs/ # (ei versionhallinnassa)
-└── YYYY-MM-DD.log # Päiväkohtainen lokitiedosto (automaattisesti luotu)
+  └── YYYY-MM-DD.log # Päiväkohtainen lokitiedosto (automaattisesti luotu)
 ```
 
 **Lokit:** Jokaiselle päivälle luodaan oma tiedosto (esim. `2025-04-15.log`), joka tallentuu `logs/`-kansioon. Lokit sisältävät aikaleimat, tapahtumat, virheet ja event ID:t kyseiseltä päivältä.
