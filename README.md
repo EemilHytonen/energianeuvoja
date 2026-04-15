@@ -216,6 +216,11 @@ DeepSeek API voi olla hidas ensimmäisessä kutsussa, ja pitkä prompt (paljon v
 
 Ratkaisu: Tuotannossa voitaisiin käyttää välimuistia, asynkronista käsittelyä tai keventää promptia (vähemmän vinkkejä).
 
+**8. Tekoälyn tuottamat pienet kirjoitus- ja sanamuotovirheet**
+
+Tekoälyn vastauksissa esiintyi ajoittain pieniä kielioppivirheitä, kuten yhdyssanavirheitä tai vääriä päätteitä. Nämä olivat satunnaisia eivätkä toistuneet systemaattisesti, mutta heikensivät hieman asiakaskokemusta.
+
+Ratkaisu: Jatkokehityksessä kielioppivirheiden korjaamiseksi voitaisiin toteuttaa vastauksen jälkikäsittely (esim. käyttämällä toista kevyttä kielimallia oikolukuun) tai hienosäätää promptia antamaan vielä tarkempia ohjeita suomen kielen rakenteesta (esim. "varmista yhdyssanojen oikeinkirjoitus" ja "tarkista lauseiden loogisuus"). Demonstraatiossa nämä satunnaiset virheet hyväksyttiin, koska ne eivät vaikuttaneet vinkkien ymmärrettävyyteen.
 
 ## 8. Jatkokehitysideat
 
