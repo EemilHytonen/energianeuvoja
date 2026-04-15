@@ -24,57 +24,57 @@ Palvelu analysoi asiakkaan sähkönkulutusta (7 päivän tuntidata), vertaa sit�
 
 ## 3. Miten sovellus toimii
 
-    Sovellus on rakennettu modulaariseksi ja se toimii seuraavasti:
+Sovellus on rakennettu modulaariseksi ja se toimii seuraavasti:
 
 **1. Käyttäjä valitsee asiakkaan** (Matti, Laura, Mikko, Jukka, Sari)
 
-    Valinta tapahtuu Streamlitin selectbox-komponentilla.
+Valinta tapahtuu Streamlitin selectbox-komponentilla.
 
 **2. Sovellus lataa tiedot**
 
-    data_loader.py hakee valitun asiakkaan kulutusdatan (data/consumption_<nimi>.json) ja profiilitiedot (data/profiles.json).
+data_loader.py hakee valitun asiakkaan kulutusdatan (data/consumption_<nimi>.json) ja profiilitiedot (data/profiles.json).
 
-    Kulutusdata sisältää 7 päivän satunnaiset tuntikohtaiset sähkönkulutukset (mock-data). Satunnaisuutta on rajattu realismiin pyrkien (generate_weekly_data.py).
+Kulutusdata sisältää 7 päivän satunnaiset tuntikohtaiset sähkönkulutukset (mock-data). Satunnaisuutta on rajattu realismiin pyrkien (generate_weekly_data.py).
 
-    Profiili sisältää asumismuodon, lämmitystavan, ilmalämpöpumpun, sähköauton, mökin, saunan ja pörssisähkön käytön.
+Profiili sisältää asumismuodon, lämmitystavan, ilmalämpöpumpun, sähköauton, mökin, saunan ja pörssisähkön käytön.
 
 **3. Tekoäly (DeepSeek) analysoi kulutuksen**
 
-    analyzer.py laskee asiakkaan viikkokulutuksen ja vertaa sitä pyöristettyyn Tilastokeskuksen keskiarvoon asumismuodon perusteella.
+analyzer.py laskee asiakkaan viikkokulutuksen ja vertaa sitä pyöristettyyn Tilastokeskuksen keskiarvoon asumismuodon perusteella.
 
-    Tiedot lähetetään DeepSeekille promptin avulla, joka pyytää tunnistamaan kolme suurinta kulutuspiikkiä, tarkastelemaan yökulutusta (23-05) ja kommentoimaan vertailua Tilastokeskuksen keskiarvoon.
+Tiedot lähetetään DeepSeekille promptin avulla, joka pyytää tunnistamaan kolme suurinta kulutuspiikkiä, tarkastelemaan yökulutusta (23-05) ja kommentoimaan vertailua Tilastokeskuksen keskiarvoon.
 
-    Tekoäly palauttaa analyysin tekstinä.
+Tekoäly palauttaa analyysin tekstinä.
 
 **4. Vinkkien suodatus ja valinta**
 
-    tip_retriever.py suodattaa tips.json:n vinkit asiakkaan profiilin perusteella (esim. jos asiakkaalla ei ole sähköautoa, sähköautovinkit jätetään pois). Vinkkikategorioita on yhteensä 14 ja yhteensä vinkkejä 34.
+tip_retriever.py suodattaa tips.json:n vinkit asiakkaan profiilin perusteella (esim. jos asiakkaalla ei ole sähköautoa, sähköautovinkit jätetään pois). Vinkkikategorioita on yhteensä 14 ja yhteensä vinkkejä 34.
 
-    Suodatuksen jälkeen vinkit ryhmitellään kategorioittain ja valitaan korkeintaan 6 eri kategoriaa (kerrostettu otanta). Kustakin kategoriasta poimitaan yksi satunnainen vinkki. Tällä varmistetaan, että asiakas saa monipuolisia neuvoja heille sopivilta aihealueilta.
+Suodatuksen jälkeen vinkit ryhmitellään kategorioittain ja valitaan korkeintaan 6 eri kategoriaa (kerrostettu otanta). Kustakin kategoriasta poimitaan yksi satunnainen vinkki. Tällä varmistetaan, että asiakas saa monipuolisia neuvoja heille sopivilta aihealueilta.
 
 **5. Lopullisen vastauksen muodostus**
 
-    app.py rakentaa uuden promptin, jossa tekoäly saa profiilin, analyysin ja valitut vinkit.
+app.py rakentaa uuden promptin, jossa tekoäly saa profiilin, analyysin ja valitut vinkit.
 
-    Tekoälyä pyydetään valitsemaan korkeintaan neljä vinkkiä kerrostetusta otannasta ja kirjoittamaan henkilökohtainen, ystävällinen vastaus (max 8 virkettä).
+Tekoälyä pyydetään valitsemaan korkeintaan neljä vinkkiä kerrostetusta otannasta ja kirjoittamaan henkilökohtainen, ystävällinen vastaus (max 8 virkettä).
 
-    Vastaus muotoillaan niin, että jokaisen vinkin perässä on (Lähde: Nimi, URL), ja nämä muunnetaan HTML-linkeiksi, jotta lähteet ovat varmistettavissa.
+Vastaus muotoillaan niin, että jokaisen vinkin perässä on (Lähde: Nimi, URL), ja nämä muunnetaan HTML-linkeiksi, jotta lähteet ovat varmistettavissa.
 
 **6. Tulosten esittäminen**
 
-    Streamlit näyttää:
+Streamlit näyttää:
 
-    Viikkokulutuksen vertailu – kolme mittaria (sinun kulutuksesi dataan perustuen, keskiarvo asumismuodossa, ero prosentteina), lähdeviittauksella Tilastokeskukseen.
+Viikkokulutuksen vertailu – kolme mittaria (sinun kulutuksesi dataan perustuen, keskiarvo asumismuodossa, ero prosentteina), lähdeviittauksella Tilastokeskukseen.
 
-    Kuvaaja – käyttäjän viikon tuntikulutus (kellonajat 0,6,12,18 merkitty toiselle akselille).
+Kuvaaja – käyttäjän viikon tuntikulutus (kellonajat 0,6,12,18 merkitty toiselle akselille).
 
-    Tekoälyn analyysi ja vinkit – klikattavat lähdelinkit.
+Tekoälyn analyysi ja vinkit – klikattavat lähdelinkit.
 
-    Lähdeluettelo – pääsivujen linkit analyysissä käytetyille lähteille.
+Lähdeluettelo – pääsivujen linkit analyysissä käytetyille lähteille.
 
 **7. Lokitus**
 
-    logger.py tallentaa jokaisen analyysin tapahtumat (event-id, valitut vinkit, virheet) tiedostoon logs/-kansioon ja tulostaa ne myös IDE:n (VSC) terminaaliin.
+logger.py tallentaa jokaisen analyysin tapahtumat (event-id, valitut vinkit, virheet) tiedostoon logs/-kansioon ja tulostaa ne myös IDE:n (VSC) terminaaliin.
 
 ## 4. Arkkitehtuuri (modulaarinen)
 
@@ -172,45 +172,45 @@ Vertailuarvot viikkokulutukselle (kerrostalo 100 kWh, rivitalo 180 kWh, omakotit
 
 **1. Tekoälyn hallusinaatioiden estäminen**
 
-    Tekoälyllä on taipumus keksiä omia "järkeviä" vinkkejä, jotka eivät perustu luotettaviin lähteisiin.
+Tekoälyllä on taipumus keksiä omia "järkeviä" vinkkejä, jotka eivät perustu luotettaviin lähteisiin.
 
-    Ratkaisu: Vinkit erotettiin staattiseksi JSON-tietopohjaksi (tips.json). Tekoäly valitsee ja personoi vinkit, mutta ei koskaan lisää uusia neuvoja. Jokaisen vinkin mukana tulee lähdeviite.
+Ratkaisu: Vinkit erotettiin staattiseksi JSON-tietopohjaksi (tips.json). Tekoäly valitsee ja personoi vinkit, mutta ei koskaan lisää uusia neuvoja. Jokaisen vinkin mukana tulee lähdeviite.
 
 **2. Saman aiheen vinkkien päällekkäisyys**
 
-    Kaksi samaa aihetta käsittelevää vinkkiä (esim. ilmalämpöpumppu) saattoi valikoitua, koska ne olivat eri kategorioissa ("ilmalämpöpumppu" ja "lämmitys").
+Kaksi samaa aihetta käsittelevää vinkkiä (esim. ilmalämpöpumppu) saattoi valikoitua, koska ne olivat eri kategorioissa ("ilmalämpöpumppu" ja "lämmitys").
 
-    Ratkaisu: Ongelma tunnistettu, mutta konfliktiryhmien hallintaa (esim. vinkit 3 ja 9 eivät saisi olla samanaikaisesti) ei ehditty toteuttaa. Tämä on hyväksytty rajoite demossa, sillä ongelma rajoittuu tässä projektissa vain näihin kahteen kyseiseen vinkkiin (3 ja 9).
+Ratkaisu: Ongelma tunnistettu, mutta konfliktiryhmien hallintaa (esim. vinkit 3 ja 9 eivät saisi olla samanaikaisesti) ei ehditty toteuttaa. Tämä on hyväksytty rajoite demossa, sillä ongelma rajoittuu tässä projektissa vain näihin kahteen kyseiseen vinkkiin (3 ja 9).
 
 **3. Lokeissa näkyvä "liian monta vinkkiä" -varoitus**
 
-    extract_used_sources tunnistaa käytetyt vinkit lähteen perusteella. Jos vastauksessa mainitaan "Motiva", kaikki Motivan vinkit merkitään valituiksi. Ongelma korostui, koska tekoälyn tuottamissa vastauksissa lähdeviitteet olivat HTML-linkkejä.
+extract_used_sources tunnistaa käytetyt vinkit lähteen perusteella. Jos vastauksessa mainitaan "Motiva", kaikki Motivan vinkit merkitään valituiksi. Ongelma korostui, koska tekoälyn tuottamissa vastauksissa lähdeviitteet olivat HTML-linkkejä.
 
-    Ratkaisu: Parannettiin funktiota poistamaan HTML-tagit ennen vertailua (clean_text = re.sub(r'<[^>]+>', '', text)), jotta lähdenimi löytyy oikein. Tarkempi vinkkikohtainen tunnistus (otsikon tai sisällön perusteella) jätettiin kuitenkin toteuttamatta aikataulusyistä. Tämä on hyväksytty rajoite, koska se ei vaikuta loppukäyttäjän kokemukseen.
+Ratkaisu: Parannettiin funktiota poistamaan HTML-tagit ennen vertailua (clean_text = re.sub(r'<[^>]+>', '', text)), jotta lähdenimi löytyy oikein. Tarkempi vinkkikohtainen tunnistus (otsikon tai sisällön perusteella) jätettiin kuitenkin toteuttamatta aikataulusyistä. Tämä on hyväksytty rajoite, koska se ei vaikuta loppukäyttäjän kokemukseen.
 
 **4. Vertailu Tilastokeskuksen dataan**
 
-    Puuttui konkreettinen vertailu oman kulutuksen ja Tilastokeskuksen keskiarvon välillä.
+Puuttui konkreettinen vertailu oman kulutuksen ja Tilastokeskuksen keskiarvon välillä.
 
-    Ratkaisu: Lisättiin analyzer.py:hen vertailulaskenta ja app.py:hen visuaaliset mittarit (kolme korttia). Kuvaajaan lisättiin toinen akseli kellonajoille. Vertailuarvot ovat pyöristettyjä havainnollisuuden vuoksi.
+Ratkaisu: Lisättiin analyzer.py:hen vertailulaskenta ja app.py:hen visuaaliset mittarit (kolme korttia). Kuvaajaan lisättiin toinen akseli kellonajoille. Vertailuarvot ovat pyöristettyjä havainnollisuuden vuoksi.
 
 **5. Tekoälyn lämpötila (temperature)**
 
-    Matala lämpötila (0.0-0.1) tekee vastauksista jäykkiä mutta luotettavia. Korkeampi lämpötila toisi teoriassa luonnollisuutta tekstiin mutta lisäsi hallusinaatioiden riskiä huomattavasti (0.3-0.5).
+Matala lämpötila (0.0-0.1) tekee vastauksista jäykkiä mutta luotettavia. Korkeampi lämpötila toisi teoriassa luonnollisuutta tekstiin mutta lisäsi hallusinaatioiden riskiä huomattavasti (0.3-0.5).
 
-    Ratkaisu: Valittu temperature=0.2 on tietoinen kompromissi luotettavuuden ja luonnollisuuden välillä.
+Ratkaisu: Valittu temperature=0.2 on tietoinen kompromissi luotettavuuden ja luonnollisuuden välillä.
 
 **6. API-kutsujen epävarmuus ja aikakatkaisut (ReadTimeoutError)**
 
-    DeepSeek API ei aina ehdi vastata 30 sekunnin aikana (palvelimen ruuhka, hidas verkkoyhteys, raskas pyyntö). Virhe on erittäin harvinainen eikä toistu systemaattisesti.
+DeepSeek API ei aina ehdi vastata 30 sekunnin aikana (palvelimen ruuhka, hidas verkkoyhteys, raskas pyyntö). Virhe on erittäin harvinainen eikä toistu systemaattisesti.
 
-    Ratkaisu: Lisätty timeout=30 ja virheenkäsittely (try-except). Tämä on hyväksytty rajoite, koska demonstraatiota ei skaalata tuotantokäyttöön eikä harvinaisia virhetilanteita ole mielekästä korjata tässä vaiheessa. Tuotannossa voitaisiin toteuttaa uudelleenyritykset (retry-logic), asynkroniset kutsut tai pyynnön keventäminen.
+Ratkaisu: Lisätty timeout=30 ja virheenkäsittely (try-except). Tämä on hyväksytty rajoite, koska demonstraatiota ei skaalata tuotantokäyttöön eikä harvinaisia virhetilanteita ole mielekästä korjata tässä vaiheessa. Tuotannossa voitaisiin toteuttaa uudelleenyritykset (retry-logic), asynkroniset kutsut tai pyynnön keventäminen.
 
 **7. Suorituskyky**
 
-    DeepSeek API voi olla hidas ensimmäisessä kutsussa, ja pitkä prompt (paljon vinkkejä ja dataa) hidastaa vastausta.
+DeepSeek API voi olla hidas ensimmäisessä kutsussa, ja pitkä prompt (paljon vinkkejä ja dataa) hidastaa vastausta.
 
-    Ratkaisu: Tuotannossa voitaisiin käyttää välimuistia, asynkronista käsittelyä tai keventää promptia (vähemmän vinkkejä).
+Ratkaisu: Tuotannossa voitaisiin käyttää välimuistia, asynkronista käsittelyä tai keventää promptia (vähemmän vinkkejä).
 
 
 ## 8. Jatkokehitysideat
