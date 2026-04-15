@@ -2,25 +2,25 @@
 
 ## 1. Projektin kuvaus
 
-    Palvelu analysoi asiakkaan sähkönkulutusta (7 päivän tuntidata), vertaa sitä Tilastokeskuksen pyöristettyyn keskiarvoon asumismuodon mukaan ja antaa henkilökohtaisia, lähdeperusteisia säästövinkkejä asiakkaalle hänen profiilinsa mukaan. Tekoäly (DeepSeek) hoitaa analyysin ja personoinnin, mutta vinkit on erotettu omaan tietopohjaansa (`tips.json`), jotta tekoälyn hallusinaatioilta vältytään. Palvelu on toteutettu Streamlitillä ja se on suunnattu kuluttajille.
+Palvelu analysoi asiakkaan sähkönkulutusta (7 päivän tuntidata), vertaa sitä Tilastokeskuksen pyöristettyyn keskiarvoon asumismuodon mukaan ja antaa henkilökohtaisia, lähdeperusteisia säästövinkkejä asiakkaalle hänen profiilinsa mukaan. Tekoäly (DeepSeek) hoitaa analyysin ja personoinnin, mutta vinkit on erotettu omaan tietopohjaansa (`tips.json`), jotta tekoälyn hallusinaatioilta vältytään. Palvelu on toteutettu Streamlitillä ja se on suunnattu kuluttajille.
 
 ## 2. Teknologiat ja perustelut
 
-    Python 3.10	Pääkieli – Laajasti käytetty ja kehitetty, hyvä yhteensopivuus tekoäly- ja data-analyysityökalujen kanssa.
+Python 3.10	Pääkieli – Laajasti käytetty ja kehitetty, hyvä yhteensopivuus tekoäly- ja data-analyysityökalujen kanssa.
 
-    Streamlit - Nopeuttaa sovelluksen prototypointia ja demonstrointia yhdistämällä UI:n ja logiikan ilman tarvetta erilliselle frontend-kehitykselle. 
+Streamlit - Nopeuttaa sovelluksen prototypointia ja demonstrointia yhdistämällä UI:n ja logiikan ilman tarvetta erilliselle frontend-kehitykselle. 
 
-    DeepSeek API - Tekoälyanalyysiin sekä pääasiallinen LLM-malli projektissa. Hyvä suomen kielen tuki, edullinen ja rajapinta yhteensopiva OpenAI:n kanssa. Voidaan vaihtaa toiseen malliin ilman koodimuutoksia.
+DeepSeek API - Tekoälyanalyysiin sekä pääasiallinen LLM-malli projektissa. Hyvä suomen kielen tuki, edullinen ja rajapinta yhteensopiva OpenAI:n kanssa. Voidaan vaihtaa toiseen malliin ilman koodimuutoksia.
 
-    Matplotlib - Yksinkertainen kirjasto viikkokulutuskuvaajan piirtoon analyysissä.
+Matplotlib - Yksinkertainen kirjasto viikkokulutuskuvaajan piirtoon analyysissä.
 
-    JSON - Tietopohjan tallennukseen. Huomattavasti nopeampi tapa saada simuloitua dataa esim. kulutuksesta ja asiakasprofiileista demonstraatiota varten. Korvattaisiin oikealla tietokannalla (GDPR huomioiden) tulevaisuudessa. Sopii hyvin demonstraation suhteellisen pieneen datamäärään.
+JSON - Tietopohjan tallennukseen. Huomattavasti nopeampi tapa saada simuloitua dataa esim. kulutuksesta ja asiakasprofiileista demonstraatiota varten. Korvattaisiin oikealla tietokannalla (GDPR huomioiden) tulevaisuudessa. Sopii hyvin demonstraation suhteellisen pieneen datamäärään.
 
-    python-dotenv - API-avaimen hallintaan ympäristömuuttujissa.
+python-dotenv - API-avaimen hallintaan ympäristömuuttujissa.
 
-    requests - DeepSeek API-kutsuihin, kevyempi vaihtoehto kuin openai-kirjasto.
+requests - DeepSeek API-kutsuihin, kevyempi vaihtoehto kuin openai-kirjasto.
 
-    logging (oma logger.py) - Lokitukseen sovellukseen toimintaa ja virheiden seurantaa varten. Helpottaa huomattavasti projektin kehittämistä.
+logging (oma logger.py) - Lokitukseen sovellukseen toimintaa ja virheiden seurantaa varten. Helpottaa huomattavasti projektin kehittämistä.
 
 ## 3. Miten sovellus toimii
 
