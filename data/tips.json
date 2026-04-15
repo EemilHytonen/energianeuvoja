@@ -1,0 +1,344 @@
+{
+  "tips": [
+    {
+      "id": 1,
+      "category": "huonelämpötila",
+      "title": "Sisälämpötilan säätö 20–21 asteeseen",
+      "content": "Pyri pitämään asuintilojen lämpötila 20–21 asteessa. Jokainen asteen pudotus vähentää lämmitysenergian kulutusta noin 5 %.",
+      "source": "Motiva",
+      "source_url": "https://www.motiva.fi/tietopankki/vuokralaisen-energiansaastovinkit-2025/",
+      "last_updated": "30.1.2026",
+      "target_audience": ["kaikki"]
+    },
+    {
+      "id": 2,
+      "category": "huonelämpötila",
+      "title": "Yölämpötilan lasku",
+      "content": "Laske lämpötilaa öiksi 2–3 asteella. Nykyaikaisilla termostaateilla voit ohjelmoida lämpötilan muutoksen tapahtumaan automaattisesti.",
+      "source": "Motiva",
+      "source_url": "https://www.motiva.fi/tietopankki/saasta-saatamalla-vinkkejasahkolammitteisen-kodin-huoltoon-ja-yllapitoon/",
+      "last_updated": "10.4.2026",
+      "target_audience": ["kaikki"]
+    },
+    {
+      "id": 3,
+      "category": "lämmitys",
+      "title": "Lämmityksen ajoitus pörssisähköllä",
+      "content": "Jos sinulla on pörssisähkösopimus, ajoita sähkölämmitys ja veden lämmitys sähkön halvimpiin tunteihin (usein yöaikaan). Tämä voi tuoda merkittäviä säästöjä.",
+      "source": "Vaasan Sähkö",
+      "source_url": "https://www.vaasansahko.fi/energianeuvonta/omakotitalon-sahkonkulutus-mista-se-koostuu/",
+      "last_updated": "15.1.2026",
+      "target_audience": ["sähkölämmitys", "pörssisähkö"]
+    },
+    {
+      "id": 4,
+      "category": "lämmitys",
+      "title": "Ilmalämpöpumppu sähkölämmitteiseen taloon",
+      "content": "Ilmalämpöpumppu voi pienentää sähkölaskua jopa 800 euroa vuodessa. Rivitalossa säästöä kertyy yleensä 20–40 % vuosikulutuksesta.",
+      "source": "Vaasan Sähkö",
+      "source_url": "https://www.vaasansahko.fi/energianeuvonta/omakotitalon-sahkonkulutus-mista-se-koostuu/",
+      "last_updated": "15.1.2026",
+      "target_audience": ["sähkölämmitys", "omakotitalo", "rivitalo"]
+    },
+    {
+      "id": 5,
+      "category": "lattialämmitys",
+      "title": "Kylpyhuoneen lattialämmityksen säätö",
+      "content": "Pienennä liian kuumalla olevaa lattialämmitystä termostaatista ja pidä kylpyhuoneen ovi kiinni, jotta lämpö ei karkaa.",
+      "source": "Vaasan Sähkö",
+      "source_url": "https://www.vaasansahko.fi/energianeuvonta/sahkonkulutus-kerrostalossa-mista-se-koostuu/",
+      "last_updated": "15.1.2025",
+      "target_audience": ["kerrostalo", "lattialämmitys"]
+    },
+    {
+      "id": 6,
+      "category": "ikkunat_ja_ovet",
+      "title": "Ikkunoiden ja ovien tiivisteiden tarkistus",
+      "content": "Tarkista ikkunoiden ja ulko-ovien tiivisteet. Vaihda kuluneet tiivisteet, jotta lämmin pysyy sisällä ja kylmä ulkona.",
+      "source": "Vaasan Sähkö",
+      "source_url": "https://www.vaasansahko.fi/energiansaastovinkit/",
+      "last_updated": "",
+      "target_audience": ["omakotitalo", "rivitalo"]
+    },
+    {
+      "id": 7,
+      "category": "ikkunat_ja_ovet",
+      "title": "Lisälämmöneristys",
+      "content": "Huonosti eristetyt ikkunat kannattaa varustaa esimerkiksi lisälasituksella tai lämpökalvolla. Myös ovien alareunan vedonestävät tiivisteet vähentävät lämpöhukkaa.",
+      "source": "Energiavirasto",
+      "source_url": "https://energiavirasto.fi/energianeuvonta",
+      "last_updated": "",
+      "target_audience": ["omakotitalo", "rivitalo"]
+    },
+    {
+      "id": 8,
+      "category": "ilmalämpöpumppu",
+      "title": "Ilmalämpöpumpun käyttö talvella",
+      "content": "Pidä ilmalämpöpumppu päällä myös pakkasilla. Se on erittäin tehokas jopa -25 asteeseen asti. Älä sammuta sitä yöksi.",
+      "source": "Motiva",
+      "source_url": "https://www.motiva.fi/tietopankki/ilmalampopumppu/",
+      "last_updated": "19.2.2026",
+      "target_audience": ["ilmalämpöpumppu", "sähkölämmitys"]
+    },
+    {
+      "id": 9,
+      "category": "ilmalämpöpumppu",
+      "title": "Ilmalämpöpumpun ensisijainen käyttö",
+      "content": "Käytä ilmalämpöpumppua ensisijaisena lämmönlähteenä ennen sähköpattereita. Tämä voi säästää jopa 30–50 % lämmityskuluissa.",
+      "source": "Motiva",
+      "source_url": "https://www.motiva.fi/tietopankki/ilmalampopumppu/",
+      "last_updated": "19.2.2026",
+      "target_audience": ["ilmalämpöpumppu", "sähkölämmitys"]
+    },
+    {
+      "id": 10,
+      "category": "valaistus",
+      "title": "LED-valaistukseen siirtyminen",
+      "content": "Vaihda kaikkiin valaisimiin LED-polttimot. Ne kuluttavat jopa 80 % vähemmän energiaa ja kestävät 15–25 kertaa pidempään.",
+      "source": "Motiva",
+      "source_url": "https://www.motiva.fi/tietopankki/kodin-lamput-ja-valaistus/",
+      "last_updated": "18.12.2025",
+      "target_audience": ["kaikki"]
+    },
+    {
+      "id": 11,
+      "category": "valaistus",
+      "title": "Valaistuksen älykäs ohjaus",
+      "content": "Käytä liiketunnistimia, hämäräkytkimiä ja ajastimia. Ne varmistavat, että valot palavat vain tarvittaessa.",
+      "source": "Energiavirasto",
+      "source_url": "https://energiavirasto.fi/energianeuvonta",
+      "last_updated": "",
+      "target_audience": ["kaikki"]
+    },
+    {
+      "id": 12,
+      "category": "sähkösopimus",
+      "title": "Sähkösopimuksen kilpailutus",
+      "content": "Kilpailuta sähkösopimuksesi vähintään kerran kahdessa vuodessa. Energiaviraston sivuilta löydät vertailutyökaluja ja ohjeet kilpailutukseen.",
+      "source": "Energiavirasto",
+      "source_url": "https://energiavirasto.fi/sahkonmyyjan-vaihto",
+      "last_updated": "",
+      "target_audience": ["kaikki"]
+    },
+    {
+      "id": 13,
+      "category": "sähkösopimus",
+      "title": "Pörssisähkön hyödyntäminen",
+      "content": "Voit seurata pörssisähkön hintaa helposti esimerkiksi Vaasan Sähkön mobiilisovelluksella. Ajoita sähkönkäyttöäsi halvoille tunneille, kuten yölle tai viikonlopuille.",
+      "source": "Vaasan Sähkö",
+      "source_url": "https://www.vaasansahko.fi/energianeuvonta/onko-sinulla-porssisahko-nain-optimoit-kulutusta-ja-saastat-rahaa/",
+      "last_updated": "13.2.2026",
+      "target_audience": ["pörssisähkö"]
+    },
+    {
+      "id": 14,
+      "category": "sähkösopimus",
+      "title": "Sähkösopimuksen valinta omakotitaloon",
+      "content": "Kun kulutus on suurta, kiinnitä huomiota erityisesti energiahintaan (c/kWh), ei perusmaksuun. Vaasan Sähkön päästötön sähkö on todennettu alkuperätakuilla.",
+      "source": "Vaasan Sähkö",
+      "source_url": "https://www.vaasansahko.fi/energianeuvonta/omakotitalon-sahkonkulutus-mista-se-koostuu/",
+      "last_updated": "15.1.2026",
+      "target_audience": ["omakotitalo"]
+    },
+    {
+      "id": 15,
+      "category": "sähkönkulutuksen_seuranta",
+      "title": "Kulutuksen seuranta mobiilisovelluksella",
+      "content": "Vaasan Sähkön sovelluksessa voit seurata sähkönkulutusta tunnin tarkkuudella, verrata menneeseen ja merkitä laitehankinnat.",
+      "source": "Vaasan Sähkö",
+      "source_url": "https://www.vaasansahko.fi/energianeuvonta/omakotitalon-sahkonkulutus-mista-se-koostuu/",
+      "last_updated": "15.1.2026",
+      "target_audience": ["kaikki"]
+    },
+    {
+      "id": 16,
+      "category": "sähkönkulutuksen_seuranta",
+      "title": "Kulutuspiikkien tunnistaminen",
+      "content": "Kun huomaat, minkä piikin sähkönkulutkseen sauna tai uuni aiheuttaa, se kannustaa ajoittamaan käytön edullisemmin.",
+      "source": "Vaasan Sähkö",
+      "source_url": "https://www.vaasansahko.fi/energianeuvonta/omakotitalon-sahkonkulutus-mista-se-koostuu/",
+      "last_updated": "15.1.2026",
+      "target_audience": ["kaikki"]
+    },
+    {
+      "id": 17,
+      "category": "sähkönkulutuksen_seuranta",
+      "title": "Vertaa kulutusta keskiarvoon",
+      "content": "Kerrostalossa voit verrata omaa kulutustasi keskimääräiseen kerrostalokodin kulutukseen – se antaa osviittaa.",
+      "source": "Vaasan Sähkö",
+      "source_url": "https://www.vaasansahko.fi/energianeuvonta/sahkonkulutus-kerrostalossa-mista-se-koostuu/",
+      "last_updated": "15.1.2025",
+      "target_audience": ["kerrostalo"]
+    },
+    {
+      "id": 18,
+      "category": "viihde-elektroniikka",
+      "title": "Valmiustilan sammutus",
+      "content": "Sammuta televisio, tietokone ja pelikonsolit käytön jälkeen. Ne kuluttavat sähköä myös valmiustilassa. Käytä jatkojohtoa, jossa on katkaisin.",
+      "source": "Motiva",
+      "source_url": "https://www.motiva.fi/tietopankki/energiatehokkaat-kodinkoneet-ja-laitteet/",
+      "last_updated": "27.1.2026",
+      "target_audience": ["kaikki"]
+    },
+    {
+      "id": 19,
+      "category": "viihde-elektroniikka",
+      "title": "Kannettava vs pöytätietokone",
+      "content": "Kannettava tietokone kuluttaa jopa 80 prosenttia vähemmän sähköä kuin pöytätietokone.",
+      "source": "Vaasan Sähkö",
+      "source_url": "https://www.vaasansahko.fi/energianeuvonta/omakotitalon-sahkonkulutus-mista-se-koostuu/",
+      "last_updated": "15.1.2026",
+      "target_audience": ["kaikki"]
+    },
+    {
+      "id": 20,
+      "category": "viihde-elektroniikka",
+      "title": "Laturit irti seinästä",
+      "content": "Irrota laturit seinästä, kun et lataa laitteita – ne kuluttavat sähköä tyhjänäkin.",
+      "source": "Vaasan Sähkö",
+      "source_url": "https://www.vaasansahko.fi/energianeuvonta/omakotitalon-sahkonkulutus-mista-se-koostuu/",
+      "last_updated": "15.1.2026",
+      "target_audience": ["kaikki"]
+    },
+    {
+      "id": 21,
+      "category": "kodinkoneet",
+      "title": "Täydet koneelliset pesuun",
+      "content": "Pese pyykkiä ja astioita vasta, kun kone on täynnä. Puri käyttämään matalampia lämpötiloja (30–40 astetta) ja energiansäästöohjelmia.",
+      "source": "Motiva",
+      "source_url": "https://www.motiva.fi/tietopankki/energiatehokkaat-kodinkoneet-ja-laitteet/",
+      "last_updated": "27.1.2026",
+      "target_audience": ["kaikki"]
+    },
+    {
+      "id": 22,
+      "category": "kodinkoneet",
+      "title": "Lämpöpumppukuivausrummun hyöty",
+      "content": "Lämpöpumppukuivausrumpu kuluttaa sähköä kolmanneksen vanhempaan malliin verrattuna.",
+      "source": "Vaasan Sähkö",
+      "source_url": "https://www.vaasansahko.fi/energianeuvonta/omakotitalon-sahkonkulutus-mista-se-koostuu/",
+      "last_updated": "15.1.2026",
+      "target_audience": ["kaikki"]
+    },
+    {
+      "id": 23,
+      "category": "kodinkoneet",
+      "title": "Mikroaaltouuni vs uuni",
+      "content": "Mikroaaltouuni ja liesi kuluttavat vähemmän sähköä kuin uuni – suosi niitä pieniin ruokiin.",
+      "source": "Vaasan Sähkö",
+      "source_url": "https://www.vaasansahko.fi/energianeuvonta/omakotitalon-sahkonkulutus-mista-se-koostuu/",
+      "last_updated": "15.1.2026",
+      "target_audience": ["kaikki"]
+    },
+    {
+      "id": 24,
+      "category": "kodinkoneet",
+      "title": "Kylmälaitteiden oikea sijoitus ja lämpötila",
+      "content": "Sijoita jääkaappi ja pakastin viileään paikkaan. Jääkaapin oikea lämpötila on 5 °C ja pakastimen -18 °C. Tarkista tiivisteet ja sulata pakastin säännöllisesti.",
+      "source": "Vaasan Sähkö",
+      "source_url": "https://www.vaasansahko.fi/energianeuvonta/omakotitalon-sahkonkulutus-mista-se-koostuu/",
+      "last_updated": "15.1.2026",
+      "target_audience": ["kaikki"]
+    },
+    {
+      "id": 25,
+      "category": "vedenkulutus",
+      "title": "Lämminvesivaraajan lämpötilan lasku",
+      "content": "Pudota lämminvesivaraajan lämpötila 80 asteesta esimerkiksi 55 asteeseen – säästät energiaa noin 30 prosenttia.",
+      "source": "Vaasan Sähkö",
+      "source_url": "https://www.vaasansahko.fi/energianeuvonta/omakotitalon-sahkonkulutus-mista-se-koostuu/",
+      "last_updated": "15.1.2026",
+      "target_audience": ["omakotitalo", "mökki"]
+    },
+    {
+      "id": 26,
+      "category": "vedenkulutus",
+      "title": "Suihkun energiankulutus",
+      "content": "Kaksi minuuttia lämpimässä suihkussa kuluttaa saman verran energiaa kuin kodin kylmäsäilytys koko vuorokaudessa.",
+      "source": "Vaasan Sähkö",
+      "source_url": "https://www.vaasansahko.fi/energianeuvonta/omakotitalon-sahkonkulutus-mista-se-koostuu/",
+      "last_updated": "15.1.2026",
+      "target_audience": ["kaikki"]
+    },
+    {
+      "id": 27,
+      "category": "sauna",
+      "title": "Saunan lämpötilan vaikutus kulutukseen",
+      "content": "Lämmitä sauna 70–80 asteeseen – 100 asteen lämpötila nostaa sähkönkulutusta 20–30 prosenttia.",
+      "source": "Vaasan Sähkö",
+      "source_url": "https://www.vaasansahko.fi/energianeuvonta/omakotitalon-sahkonkulutus-mista-se-koostuu/",
+      "last_updated": "15.1.2026",
+      "target_audience": ["sauna"]
+    },
+    {
+      "id": 28,
+      "category": "sauna",
+      "title": "Saunan ilmanvaihdon optimointi",
+      "content": "Vähennä ilmanvaihtoa saunan lämmetessä – avaa ilmanvaihtoluukku vasta saunomisen jälkeen.",
+      "source": "Vaasan Sähkö",
+      "source_url": "https://www.vaasansahko.fi/energianeuvonta/omakotitalon-sahkonkulutus-mista-se-koostuu/",
+      "last_updated": "15.1.2026",
+      "target_audience": ["sauna"]
+    },
+    {
+      "id": 29,
+      "category": "sauna",
+      "title": "Sauno harvemmin, pidempään",
+      "content": "Sauno mieluummin pitkään ja harvoin kuin pikaisesti ja usein, sillä yli puolet energiasta kuluu esilämmitykseen.",
+      "source": "Vaasan Sähkö",
+      "source_url": "https://www.vaasansahko.fi/energianeuvonta/omakotitalon-sahkonkulutus-mista-se-koostuu/",
+      "last_updated": "2026-01-15",
+      "target_audience": ["sauna"]
+    },
+    {
+      "id": 30,
+      "category": "sähköauto",
+      "title": "Sähköauton ajastettu lataus ja esilämmitys",
+      "content": "Ajoita sähköauton lataus halvoille tunneille (esim. yöksi) ja esilämmitä auto lataukseen kytkettynä ennen lähtöä. Näin säästät sähköä ja akun varausta.",
+      "source": "Motiva",
+      "source_url": "https://www.motiva.fi/tietopankki/sahkoauton-lataus-ja-auton-lammitys-energiatehokas-autoilu/",
+      "last_updated": "13.1.2026",
+      "target_audience": ["sähköauto"]
+    },
+    {
+      "id": 31,
+      "category": "sähköauto",
+      "title": "Sähköauton talvikäytön energiatehokkuus",
+      "content": "Kylmällä kelillä pidä auto latausjohdon päässä aina kun mahdollista, jotta akku pysyy lämpimänä. Vältä täyttä 100 % latausta jokapäiväisessä käytössä – suositus on 80–90 % akun keston pidentämiseksi.",
+      "source": "Motiva",
+      "source_url": "https://www.motiva.fi/tietopankki/sahkoauton-lataus-ja-auton-lammitys-energiatehokas-autoilu/",
+      "last_updated": "13.1.2026",
+      "target_audience": ["sähköauto"]
+    },
+    {
+      "id": 32,
+      "category": "mökki",
+      "title": "Mökin ylläpitolämmityksen säätö termostaatilla",
+      "content": "Hyödynnä ylläpitolämmityksessä termostaattia, joka seuraa lämpötiloja ja säätää lämmitystehoa tarpeen mukaan. Tämä pienentää sähkönkulutusta.",
+      "source": "Vaasan Sähkö",
+      "source_url": "https://www.vaasansahko.fi/energianeuvonta/kesamokin-sahkonkulutus-mista-se-koostuu/",
+      "last_updated": "9.1.2025",
+      "target_audience": ["mökki"]
+    },
+    {
+      "id": 33,
+      "category": "mökki",
+      "title": "Etäohjattava lämmitys mökille",
+      "content": "Harkitse etäohjattavaa lämmitysjärjestelmää mökille. Näin voit säätää mökin lämpötilaa kätevästi sopivaksi vaikkapa puhelimestasi vuoden ympäri.",
+      "source": "Vaasan Sähkö",
+      "source_url": "https://www.vaasansahko.fi/energianeuvonta/kesamokin-sahkonkulutus-mista-se-koostuu/",
+      "last_updated": "9.1.2025",
+      "target_audience": ["mökki"]
+    },
+    {
+      "id": 34,
+      "category": "mökki",
+      "title": "Mökin aurinkopaneelit",
+      "content": "Yksittäinen aurinkopaneeli voi riittää kännykän lataamiseen tai led-lamppujen käyttämiseen. Isompi järjestelmä voi tuottaa merkittävän osan mökin sähköstä.",
+      "source": "Vaasan Sähkö",
+      "source_url": "https://www.vaasansahko.fi/energianeuvonta/kesamokin-sahkonkulutus-mista-se-koostuu/",
+      "last_updated": "9.1.2025",
+      "target_audience": ["mökki"]
+    }
+  ]
+}

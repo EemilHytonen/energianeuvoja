@@ -1,0 +1,47 @@
+{
+  "Matti": {
+    "asumismuoto": "omakotitalo",
+    "lämmitys_tapa": "sähkö",
+    "ilmalämpöpumppu": true,
+    "sähköauto": false,
+    "mökki": false,
+    "sauna": true,
+    "pörssisähkö": true
+  },
+  "Laura": {
+    "asumismuoto": "kerrostalo",
+    "lämmitys_tapa": "kaukolämpö",
+    "ilmalämpöpumppu": false,
+    "sähköauto": false,
+    "mökki": false,
+    "sauna": false,
+    "pörssisähkö": true
+  },
+  "Mikko": {
+    "asumismuoto": "rivitalo",
+    "lämmitys_tapa": "sähkö",
+    "ilmalämpöpumppu": false,
+    "sähköauto": false,
+    "mökki": false,
+    "sauna": true,
+    "pörssisähkö": true
+  },
+  "Jukka": {
+    "asumismuoto": "omakotitalo",
+    "lämmitys_tapa": "sähkö",
+    "ilmalämpöpumppu": true,
+    "sähköauto": true,
+    "mökki": true,
+    "sauna": true,
+    "pörssisähkö": true
+  },
+  "Sari": {
+    "asumismuoto": "omakotitalo",
+    "lämmitys_tapa": "maalämpö",
+    "ilmalämpöpumppu": false,
+    "sähköauto": true,
+    "mökki": false,
+    "sauna": true,
+    "pörssisähkö": true
+  }
+}
