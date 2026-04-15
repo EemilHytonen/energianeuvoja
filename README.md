@@ -14,7 +14,7 @@ Palvelu analysoi asiakkaan sähkönkulutusta (7 päivän tuntidata), vertaa sit�
 
 **Matplotlib** - Yksinkertainen kirjasto viikkokulutuskuvaajan piirtoon analyysissä.
 
-**JSON** - Tietopohjan tallennukseen. Huomattavasti nopeampi tapa saada simuloitua dataa esim. kulutuksesta ja asiakasprofiileista demonstraatiota varten. Korvattaisiin oikealla tietokannalla (GDPR huomioiden) tulevaisuudessa. Sopii hyvin demonstraation suhteellisen pieneen datamäärään.
+**JSON** - Tietopohjan tallennukseen. Huomattavasti nopeampi tapa saada tallennetua simuloitua dataa esim. kulutuksesta ja asiakasprofiileista demonstraatiota varten kuin toteuttaa oikea tietokanta. Korvattaisiin oikealla tietokannalla (GDPR huomioiden) tulevaisuudessa. Sopii hyvin demonstraation suhteellisen pieneen datamäärään.
 
 **python-dotenv** - API-avaimen hallintaan ympäristömuuttujissa.
 
