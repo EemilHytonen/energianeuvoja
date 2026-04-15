@@ -268,8 +268,20 @@ Thumbs.db
 
 ## 10. Kuvakaappauksia
 
-![Sovelluksen esittely](images/matti_analyysi.png)
-![Sovelluksen esittely](images/mikko.png)
+Kaikki projektissa esiintyvät käyttäjät ovat kuvitteellisia ja heidän datansa on simuloitua.
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="images/matti_analyysi.png" width="400" />
+      <br><strong>Kuva 1:</strong> Matin analyysi
+    </td>
+    <td align="center">
+      <img src="images/mikko_analyysi.png" width="400" />
+      <br><strong>Kuva 2:</strong> Mikon analyysi
+    </td>
+  </tr>
+</table>
 
 ## 11. Tekijä ja kiitokset
 
